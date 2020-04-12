@@ -1,3 +1,5 @@
 https://github.com/codenation-dev/AceleraDev-React-Online
 
+https://github.com/amarofashion/front-end-challenge/blob/master/products.json
+
 gravar todos os desafios em user\codenation
