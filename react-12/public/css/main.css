@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+:root {--body-bg: #FAFAFA;}
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+
+html{
+	font-size: 10px;
+}
+
+
+
+body{
+	padding-top: 56px;
+	font-family: 'Open Sans', sans-serif;
+	background-color: var(--body-bg);
+	color: #000;
+}
+
+a{
+	text-decoration: none;
+	color: #000;
+	font-weight: bold;
+}
+
+button{
+	background-color: transparent;
+	border: none;
+	box-shadow: none;
+	outline: none;
+}
+
+.container{
+	width: 100%;
+	margin: 0 auto;
+}
+
+
+@media screen and (min-width: 728px){
+	.container{
+		width: 728px;
+	}
+}
+
+.topbar{
+	backface-visibility: hidden;
+	background-color: white;
+	left: 0;
+    padding: 8px 16px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);   
+}
+
+.topbar, .container{
+	display: flex;
+	justify-content: space-between;
+}
+
+.topbar__logo{
+	display: inline-block;
+	height: 40px;
+}
+
+.topbar__logo img{
+	height: 100%;
+}
+
+.topbar__icon{
+	font-size: 1.6rem;
+}
+
+.user__thumb{
+	display: flex;
+	border-radius: 100%;
+	over-flow: hidden;
+}
+
+.user__thumb__wrapper{
+	border-radius: 100%;
+	border: 2px solid white;
+	display: inline-block;
+	overflow: hidden;
+}
+
+.user__thumb img{
+	height: 100%;
+	width: 100%
+}
