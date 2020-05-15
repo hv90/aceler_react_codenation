@@ -1,1 +1,0 @@
-refatorei minha solucao, pois vi que o enunciado ta meio confuso, agora coloquei que o elemento pode ser no maxio 350, antes eu coloquei que assim que ele ultrapassar ele parava o loop,  ele ainda iria formar o elemento do fibonacci, resultando no 377. Eu tinha submetido e recebi 100 de score, mas acabei vendo muitos implementando a fibonacci ate 350, ai acabei seguindo o pesso
