@@ -5,7 +5,7 @@ import DownArrow from './DownArrow';
 import './Slider.css';
 import SliderBullets from './SliderBullets';
 
-const mockData = require('./mockData');
+const mockData = require('../mockData');
 
 
 export default class Slider extends Component {
