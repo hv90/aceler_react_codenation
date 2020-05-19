@@ -1,10 +1,17 @@
-import React, { Component } from 'react';
-import Slider from './components/slider/Slider';
+import React, {Component} from 'react';
+import Toggle from './components/toggle/Toggle';
 
 export default class App extends Component {
-  render() {
-    return (
-      <Slider/>
-    )
-  }
+    constructor(props) {
+        super(props);
+        this.state = {}
+    }
+
+    render() {
+        return (
+            <div className="App">
+                <Toggle/>
+            </div>
+        )
+    }
 }

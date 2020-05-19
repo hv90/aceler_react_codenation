@@ -5,21 +5,25 @@ import DownArrow from './DownArrow';
 import './Slider.css';
 import SliderBullets from './SliderBullets';
 
-const mockData = require('../mockData');
-
 
 export default class Slider extends Component {
     constructor(props) {
         super(props);
         this.state = {
             _activeIndex: 0,
-            _length: mockData.length
+            _slidesArray:[]
         };
+    }
+
+    componentDidMount() {
+        fetch('https://5e9935925eabe7001681c856.mockapi.io/api/v1/catalog')
+            .then(response => response.json())
+            .then(slidesArray => this.setState({_slidesArray: slidesArray}))
     }
 
     goToPrevSlide = () => {
         let index = this.state._activeIndex;
-        let length = this.state._length;
+        let length = this.state._slidesArray.length;
         if (index < 1) {
             index = length - 1;
         } else {
@@ -30,9 +34,9 @@ export default class Slider extends Component {
 
     goToNextSlide = () => {
         let index = this.state._activeIndex;
-        let length = this.state._length;
+        let length = this.state._slidesArray.length;
         if (index === length - 1) {
-            index = 0
+            index = 0;
         } else {
             index++;
         }
@@ -46,11 +50,11 @@ export default class Slider extends Component {
                     <UpArrow 
                       goToPrevSlide={() => this.goToPrevSlide()}
                     />
-
+                         
                     <div className='slider-text'>
                         <Slide 
                           activeIndex={this.state._activeIndex} 
-                          mockData={mockData}
+                          slidesArray={this.state._slidesArray}
                         />
                     </div>
 
@@ -58,10 +62,10 @@ export default class Slider extends Component {
                       goToNextSlide={() => this.goToNextSlide()}
                     />
 
-                    <SliderBullets
+                    {<SliderBullets
                       activeIndex={this.state._activeIndex} 
-                      length={this.state._length}
-                    />
+                      length={this.state._slidesArray.length}
+                    />}
                 </div>
             </div>
         )

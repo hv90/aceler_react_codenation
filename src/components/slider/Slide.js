@@ -1,15 +1,11 @@
 import React from 'react'
 
 export default class Slide extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {_landing: props.mockData};
-      }
     render() {
         return(
           <section>
           {
-            this.state._landing.map((slide, index) =>
+            this.props.slidesArray.map((slide, index) =>
               <div 
                 className={index === this.props.activeIndex ? 'active' : 'inactive'}
                 key={index}
