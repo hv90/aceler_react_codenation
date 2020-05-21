@@ -1,0 +1,64 @@
+
+button{
+	background-color: transparent;
+	border: none;
+	box-shadow: none;
+	outline: none;
+}
+
+
+.TopBar{
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.TopBar__items{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 750px){
+    .TopBar__search, 
+    .list__item{
+		display: none;
+    } 
+}
+
+@media screen and (min-width: 750px){
+    .TopBar__toggle{
+        display: none;
+    }
+}
+
+.TopBar__toggle{
+    margin: 30px 10px;
+}
+
+.TopBar__logo{
+    display: inline-block;
+	height: 100px;
+}
+
+.TopBar__logo img{
+	height: 100%;
+}
+
+.TopBar__search{
+    margin-top: 10px;
+}
+
+.TopBar__list{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+}
+
+.list__item{
+    margin: 0 10px;
+}
+
+h2, h4, fa-shopping-cart, .TopBar__toggle{
+    color: #ec0868;
+}
