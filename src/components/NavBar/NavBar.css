@@ -1,0 +1,9 @@
+.navbar__list{
+  list-style: none;
+  margin: 0;
+  padding: 20px;
+}
+
+.navbar__item{
+  margin: 0 10px;
+}

@@ -1,64 +1,51 @@
 
 button{
-	background-color: transparent;
-	border: none;
-	box-shadow: none;
-	outline: none;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
 }
 
-
-.TopBar{
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-}
-
-.TopBar__items{
+.topbar__items{
+    position: absolute;
     display: flex;
     justify-content: space-between;
     width: 100%;
-	margin: 0 auto;
+    margin: 0 auto;
 }
 
 @media screen and (max-width: 750px){
-    .TopBar__search, 
-    .list__item{
-		display: none;
+    .topbar__item,
+    .topbar__searchbar{
+        display: none;
     } 
 }
 
-@media screen and (min-width: 750px){
-    .TopBar__toggle{
-        display: none;
-    }
-}
-
-.TopBar__toggle{
-    margin: 30px 10px;
-}
-
-.TopBar__logo{
+.topbar__logo{
     display: inline-block;
-	height: 100px;
+    height: 100px;
+    margin-right: 10px;
 }
 
-.TopBar__logo img{
-	height: 100%;
+.topbar__logo img{
+    height: 100%;
 }
 
-.TopBar__search{
+.topbar__searchbar{
     margin-top: 10px;
 }
 
-.TopBar__list{
+.topbar__navbar{
     display: flex;
     list-style: none;
     margin: 0;
     padding: 20px;
 }
 
-.list__item{
+.topbar__item{
     margin: 0 10px;
 }
 
-h2, h4, fa-shopping-cart, .TopBar__toggle{
+h2, h4, fa-shopping-cart, .sidebar{
     color: #ec0868;
 }

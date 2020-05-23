@@ -8,15 +8,23 @@ Oferecer a melhor experiência aos usuários que interagem com os produtos no de
 Objetivo
 Como um profissional front-end, você será responsável por desenvolver as principais funcionalidades de um e-commerce de moda feminina, o Fashionista, garantindo a melhor experiência possível para os usuários interagirem com os produtos.
 
+topbar
+toggle button
 sidebar
 slides 
-zoom tool
-toggle button
-topbar
-footer / contacts / social medias
-about?
+catalog
+products
+loading
 pic-not-found
 page-not-found
+
+zoom tool
+footer / contacts / social medias
+about?
+
+
+
+
 
 
 
