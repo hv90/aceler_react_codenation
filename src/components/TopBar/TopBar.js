@@ -5,9 +5,8 @@ import SideBar from '../SideBar/SideBar';
 
 export default function topbar() {
   return (
-    <div className="topbar">
-
-      <div className="topbar__items">
+    <header className="topbar">
+      <nav className="topbar__items">
         <SideBar />
 
         <div className="topbar__logo" >
@@ -27,8 +26,7 @@ export default function topbar() {
             </button>
           </li>
         </ul>
-      </div>
-
-    </div>
+      </nav>
+    </header>
   )
 }
