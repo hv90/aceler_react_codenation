@@ -6,10 +6,6 @@ export default function Product({ product }) {
   console.log(product);
   return (
     <article className="product">
-      <div className="product__bordertop">
-        k
-      </div>
-
       <div className="product__img">
         {product.image ?
           <img src={`${product.image}`} alt={`${product.name}`} />

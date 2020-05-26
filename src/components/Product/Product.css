@@ -13,13 +13,6 @@
   background-image: linear-gradient(white, gray, black);
 }
 
-.product__bordertop{
-  background-color: #d80fe2;  
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;  
-  color: transparent;
-}
-
 .product__borderbottom{
   background-color: #d80fe2;  
   border-bottom-left-radius: 8px;
