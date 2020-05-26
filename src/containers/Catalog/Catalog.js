@@ -14,8 +14,7 @@ export default function Catalog() {
     }, []);
 
   return (
-    <section className="products">
-    <div className="products__bordertop"></div>        
+    <section className="products">       
           {products.length > 0 ? products.map(
             product =>
               <Product key={product.image} product={product} />
