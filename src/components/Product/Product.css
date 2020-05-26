@@ -54,5 +54,23 @@
   top: 0;
 }
 
+.product__regprice{
+  text-decoration: line-through;
+  opacity: 0.6;
+  font-size: 13px;
+}
 
+.product__name,
+.product__actualprice{
+  font-weight: 900;
+  color: #ec0868;
+}
+
+.product__name{
+  font-size: 14px;
+}
+
+.product__actualprice{
+  font-size: 13px;
+}
 

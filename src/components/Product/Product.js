@@ -18,14 +18,14 @@ export default function Product({ product }) {
       </div>
 
       <div className="product__info">
-        <h4>{product.name}</h4>
+        <div className="product__name">{product.name}</div>
 
         {product.on_sale ?
           <div className="product__onsale">
-            <span className="product__regprice">{product.regular_price} &nbsp;&nbsp;</span>
-            <span className="product_actualprice">{product.actual_price}</span>
+            <span className="product__regprice">{product.regular_price}</span>&nbsp;&nbsp;
+            <span className="product__actualprice">{product.actual_price}</span>
           </div>
-          :<div className="product_actualprice">{product.actual_price}</div>
+          :<div className="product__actualprice">{product.actual_price}</div>
           
         }
       </div>

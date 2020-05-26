@@ -2,6 +2,7 @@ import React from 'react';
 import './TopBar.css';
 import logo from '../../assets/fashionista_logo1.png';
 import SideBar from '../SideBar/SideBar';
+import SearchBar from '../SearchBar/SearchBar';
 
 export default function topbar() {
   return (
@@ -12,10 +13,8 @@ export default function topbar() {
         <div className="topbar__logo" >
           <img src={logo} alt="" />
         </div>
-
-        <div className="topbar__searchbar">
-          <button><h2>SEARCH ___________</h2></button>
-        </div>
+        <div className="topbar__searchbar"><SearchBar /></div>
+        
 
         <ul className="topbar__navbar">
           <li className="topbar__item"><button><h4>log in</h4></button></li>

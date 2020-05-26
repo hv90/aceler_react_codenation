@@ -30,10 +30,6 @@ button{
     height: 100%;
 }
 
-.topbar__searchbar{
-    margin-top: 10px;
-}
-
 .topbar__navbar{
     display: flex;
     list-style: none;

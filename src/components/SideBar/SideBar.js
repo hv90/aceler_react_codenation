@@ -33,8 +33,8 @@ export default function SideBar() {
         >
           < i className="fas fa-bars fa-3x" />
         </button>
-
-        <div className="sidebar__content"
+        
+        <div className={`sidebar__content`}
           style={{ display: `${display}` }}
         >
           <div className="content" > {arrayDivs} </div >
