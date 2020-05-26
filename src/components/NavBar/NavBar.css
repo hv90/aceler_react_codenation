@@ -1,4 +1,5 @@
 .navbar__list{
+  display: flex;
   list-style: none;
   margin: 0;
   padding: 20px;
@@ -6,4 +7,14 @@
 
 .navbar__item{
   margin: 0 10px;
+}
+
+h2, fa-shopping-cart{
+  color: #ec0868;
+}
+
+@media screen and (max-width: 750px){
+  .navbar__list{
+    flex-direction: column;
+  } 
 }

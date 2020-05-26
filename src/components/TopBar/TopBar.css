@@ -14,7 +14,7 @@ button{
 }
 
 @media screen and (max-width: 750px){
-    .topbar__item,
+    .topbar__navbar .navbar__list,
     .topbar__searchbar{
         display: none;
     } 
@@ -30,18 +30,7 @@ button{
     height: 100%;
 }
 
-.topbar__navbar{
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 20px;
-}
-
-.topbar__item{
-    margin: 0 10px;
-}
-
-h2, h4, fa-shopping-cart, .sidebar{
+h2, h4{
     color: #ec0868;
 }
 
