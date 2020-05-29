@@ -1,0 +1,8 @@
+.search__container{
+  position: absolute;
+  margin-top: 100px;
+}
+
+.searchbar--clicked{
+  visibility: hidden;
+}

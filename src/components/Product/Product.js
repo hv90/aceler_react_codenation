@@ -3,10 +3,14 @@ import './Product.css';
 import not_found from '../../assets/image_not_found.png';
 
 export default function Product({ product }) {
-  console.log(product);
+  //console.log(product);
   return (
     <article className="product">
-      {product.on_sale ? 
+      <div className="product__bordertop">
+        k
+      </div>
+
+      {product.on_sale ?
         <div className="product__discount">-{product.discount_percentage}</div>
         : null
       }
@@ -27,12 +31,6 @@ export default function Product({ product }) {
           </div>
           : <div className="product__actualprice">{product.actual_price}</div>
         }
-      </div>
-
-
-
-      <div className="product__borderbottom">
-        k
       </div>
     </article>
   )

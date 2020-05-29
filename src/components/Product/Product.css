@@ -9,10 +9,10 @@
   flex-wrap: wrap;
 }
 
-.product__borderbottom{
+.product__bordertop{
   background-color: #d80fe2;  
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;  
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;  
   color: transparent;
 }
 
@@ -40,9 +40,7 @@
 
 .product__img img{
   width: 100%;
-  height: auto;     
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px; 
+  height: auto;
 }
 
 .product__info{

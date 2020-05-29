@@ -3,10 +3,19 @@ import './SideBar.css';
 import SearchBar from '../SearchBar/SearchBar';
 import NavBar from '../NavBar/NavBar';
 
-export default function SideBar() {
+export default function SideBar({ hideSearch = false, hideLogin = false, hideContact = false, hideCart = false }) {
   const arrayDivs = [
-    <div key="s" > < SearchBar /> </div>,
-    <div key="n" > <NavBar/> </div >
+    <div key="sidebar__searchbar" > 
+      < SearchBar hideSearch={hideSearch} /> 
+      </div>,
+      
+    <div key="sidebar__navbar" >
+      <NavBar
+        hideLogin={hideLogin}
+        hideContact={hideContact}
+        hideCart={hideCart}
+      />
+    </div >
   ]
   const [isToggled, setToggled] = React.useState(false);
   const [display, setDisplay] = React.useState("none");
@@ -33,7 +42,7 @@ export default function SideBar() {
         >
           < i className="fas fa-bars fa-3x" />
         </button>
-        
+
         <div className={`sidebar__content`}
           style={{ display: `${display}` }}
         >

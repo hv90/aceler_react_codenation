@@ -1,25 +1,15 @@
 import React from 'react';
 import Product from '../../components/Product/Product';
+import Load from '../../components/Load/Load';
 
-export default function Catalog() {
-
-  const [products, setProducts] = React.useState([]);
-
-  React.useEffect(
-    () => {
-      fetch('https://5e9935925eabe7001681c856.mockapi.io/api/v1/catalog')
-        .then(response => response.json())
-        .then(products => setProducts(products))
-        .catch(err => console.log(err))
-    }, []);
-
+export default function Catalog({products}) {
   return (
     <section className="products">       
-          {products.length > 0 ? products.map(
-            product =>
-              <Product key={product.image} product={product} />
-          )
-            : "Loading..."}
+          {products.length > 0 ?
+            products.map( product =>
+                product && <Product key={product.image} product={product} />
+            )
+            : <Load/>}
     </section >
   )
 }

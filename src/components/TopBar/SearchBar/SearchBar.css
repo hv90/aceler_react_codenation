@@ -1,0 +1,19 @@
+.searchbar{
+    padding:0 20px;
+    margin: 40px 0;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+h2{
+    color: #ec0868;
+}
+
+@media screen and (max-width: 768px){
+    .searchbar{
+        margin: 0;
+    }
+}

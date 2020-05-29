@@ -1,0 +1,14 @@
+.loading{
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.loading h3 {
+  justify-content: center;
+  display: flex;
+  color: #252525;
+  background-color: #ec0868;
+  border-radius: 10px;
+  width: 200px;
+}

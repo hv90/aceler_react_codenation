@@ -13,7 +13,7 @@ button{
     margin: 0 auto;
 }
 
-@media screen and (max-width: 750px){
+@media screen and (max-width: 768px){
     .topbar__navbar .navbar__list,
     .topbar__searchbar{
         display: none;
@@ -30,7 +30,7 @@ button{
     height: 100%;
 }
 
-h2, h4{
-    color: #ec0868;
+.clicked{
+    visibility: hidden;
 }
 
