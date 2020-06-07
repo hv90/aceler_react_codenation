@@ -1,12 +1,11 @@
 import React from 'react';
-import Catalog from '../../containers/Catalog/Catalog';
-import Load from '../../components/Load/Load';
+import {Search} from '../containers';
+import {Load} from '../components';
 
-export default function CatalogRoute() {
+export default function SearchRoute() {
   const [products, setProducts] = React.useState([]);
 
-  React.useEffect(
-    () => {
+  React.useEffect( () => {
       fetch('https://5e9935925eabe7001681c856.mockapi.io/api/v1/catalog')
         .then(response => response.json())
         .then(products => setProducts(products))
@@ -14,12 +13,11 @@ export default function CatalogRoute() {
     }, []);
 
   return (
-    <div className="catalog__route">
-    {products.length > 0 ?
-      <Catalog products={products}/>
-      : <Load/>
-    }
-    
+    <div className="search__route">
+      {products.length > 0 ?
+        <Search products={products}/>
+        : <Load/>
+      }
     </div>
   )
 }

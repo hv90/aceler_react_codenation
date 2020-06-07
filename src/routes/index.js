@@ -1,15 +1,16 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route} from 'react-router-dom';
 
-import CatalogRoute from './CatalogRoute/CatalogRoute';
-import SearchRoute from './SearchRoute/SearchRoute';
-import TopBar from '../components/TopBar/TopBar';
+import CatalogRoute from './CatalogRoute';
+import SearchRoute from './SearchRoute';
+import {TopBar} from '../components';
+import { Product } from '../containers';
 
 const Routes = () => (
   <Switch>
-    <Route exact path="/">
+    <Route exact path="/" >
       <TopBar />
-      <CatalogRoute />
+      <CatalogRoute/>
     </Route>
 
     <Route path="/search">
@@ -17,17 +18,14 @@ const Routes = () => (
       <SearchRoute />
     </Route>
 
-    <Route path="/login">
-      <SearchRoute />
-    </Route>
-
-    <Route path="/contact">
-      <SearchRoute />
-    </Route>
-
-    <Route path="/cart">
-      <SearchRoute />
-    </Route>
+    <Route path="/product" 
+           render={props => (
+            <>
+            <TopBar />
+            <Product props={props.location}/>
+            </>
+          )} 
+    />
   </Switch>
 )
 

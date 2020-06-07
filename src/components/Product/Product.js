@@ -1,11 +1,9 @@
 import React from 'react';
-import './Product.css';
 import not_found from '../../assets/image_not_found.png';
 
-export default function Product({ product }) {
-  //console.log(product);
+export default function Product({product}) {
   return (
-    <article className="product">
+    <div className="product">
       <div className="product__bordertop">
         k
       </div>
@@ -14,6 +12,7 @@ export default function Product({ product }) {
         <div className="product__discount">-{product.discount_percentage}</div>
         : null
       }
+
       <div className="product__img">
         {product.image ?
           <img src={`${product.image}`} alt={`${product.name}`} />
@@ -32,6 +31,6 @@ export default function Product({ product }) {
           : <div className="product__actualprice">{product.actual_price}</div>
         }
       </div>
-    </article>
+    </div>
   )
 }

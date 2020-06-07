@@ -31,6 +31,6 @@ button{
 }
 
 .clicked{
-    visibility: hidden;
+    opacity: 0.3;
 }
 

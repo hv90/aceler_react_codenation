@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import './TopBar.css';
 import logo from '../../assets/fashionista_logo1.png';
-import SideBar from './SideBar/SideBar';
+import {SideBar} from '../SideBar';
 import SearchBar from './SearchBar/SearchBar';
 import NavBar from './NavBar/NavBar';
 

@@ -1,14 +1,17 @@
 import React from 'react';
 import './SideBar.css';
-import SearchBar from '../SearchBar/SearchBar';
-import NavBar from '../NavBar/NavBar';
+import {NavBar, SearchBar} from '../TopBar';
 
-export default function SideBar({ hideSearch = false, hideLogin = false, hideContact = false, hideCart = false }) {
+export default function SideBar({ hideSearch = false,
+                                  hideLogin = false,
+                                  hideContact = false,
+                                  hideCart = false 
+                                }                       ) {
   const arrayDivs = [
-    <div key="sidebar__searchbar" > 
-      < SearchBar hideSearch={hideSearch} /> 
-      </div>,
-      
+    <div key="sidebar__searchbar" >
+      < SearchBar hideSearch={hideSearch} />
+    </div>,
+
     <div key="sidebar__navbar" >
       <NavBar
         hideLogin={hideLogin}
@@ -16,7 +19,7 @@ export default function SideBar({ hideSearch = false, hideLogin = false, hideCon
         hideCart={hideCart}
       />
     </div >
-  ]
+  ];
   const [isToggled, setToggled] = React.useState(false);
   const [display, setDisplay] = React.useState("none");
 

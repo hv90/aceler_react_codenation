@@ -3,8 +3,7 @@ import {Link} from 'react-router-dom';
 import './SearchBar.css';
 
 export default function SearchBar({hideSearch}) {
-  let isClicked = "notCliked"; 
-  hideSearch ? isClicked = "clicked" : isClicked = "notClicked";
+  let isClicked = hideSearch ? "clicked" : "";
 
   return (
       <div className={`searchbar ${isClicked}`}>

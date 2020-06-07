@@ -1,6 +1,6 @@
 import React from 'react';
 import './Search.css';
-import Product from '../../components/Product/Product';
+import {ProductThumbnail} from '../../components';
 
 export default function Search({ products }) {
   const [searchkey, setSearchkey] = React.useState(""); 
@@ -29,7 +29,7 @@ export default function Search({ products }) {
 
       <div className="search__results">
         {results.map(result =>
-          <div key={result.code_color}><Product product={result}/></div>
+          <div key={result.code_color}><ProductThumbnail product={result}/></div>
         )
         }
       </div>
