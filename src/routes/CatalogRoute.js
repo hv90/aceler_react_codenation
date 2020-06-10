@@ -4,12 +4,13 @@ import { Load } from '../components';
 
 export default function CatalogRoute() {
   const [products, setProducts] = React.useState([]);
+  const [hasError, setError] = React.useState(false);
 
   React.useEffect(() => {
      fetch('https://5e9935925eabe7001681c856.mockapi.io/api/v1/catalog')
       .then(response => response.json())
       .then(products => setProducts(products))
-      .catch(err => console.log(err))
+      .catch(err => setError(true))
   }, []);
 
 
@@ -18,7 +19,7 @@ export default function CatalogRoute() {
     <div className="catalog__route" >
       {products.length > 0 ?
         <Catalog products={products} />
-        : <Load />
+        : <Load hasError={hasError}/>
       }
 
     </div>
