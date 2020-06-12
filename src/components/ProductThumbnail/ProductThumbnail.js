@@ -3,13 +3,12 @@ import { Link } from 'react-router-dom';
 import './ProductThumbnail.css';
 import not_found from '../../assets/image_not_found.png';
 
-export default function ProductThumbnail({ product, products }) {
+export default function ProductThumbnail({ product }) {
   return (
     <article className="productThumbnail">
       <Link to={{
                   pathname: `/product/${product.style}`,
-                  style: `${product.style}`,
-                  products: products
+                  style: `${product.style}`
                 }}
       >
         <div className="productThumbnail__bordertop">

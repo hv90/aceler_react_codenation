@@ -1,0 +1,19 @@
+.products__container{
+  position: absolute;
+  margin-top: 100px;
+  background-color: #FBF5F3;  
+  width: 100%;
+
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.products__amount {
+  color: #EC0868;
+  font-size: 14px;
+  font-weight: 700;
+  position: absolute;
+  margin-top: 10px;
+  width: 100vh;
+}

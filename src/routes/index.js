@@ -1,10 +1,11 @@
 import React from 'react';
 import { Switch, Route} from 'react-router-dom';
 
+import ProductRoute from './ProductRoute';
+import CartRoute from './CartRoute';
 import CatalogRoute from './CatalogRoute';
 import SearchRoute from './SearchRoute';
 import {TopBar} from '../components';
-import { Product } from '../containers';
 
 const Routes = () => (
   <Switch>
@@ -22,10 +23,15 @@ const Routes = () => (
            render={props => (
             <>
             <TopBar />
-            <Product props={props.location}/>
+            <ProductRoute props={props.location}/>
             </>
           )} 
     />
+
+    <Route path="/cart">
+      <TopBar hideCart={true} />
+      <CartRoute />
+    </Route>
   </Switch>
 )
 

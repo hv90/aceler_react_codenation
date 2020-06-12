@@ -1,14 +1,3 @@
-.products{
-  position: absolute;
-  margin-top: 100px;
-  background-color: #FBF5F3;  
-  width: 100%;
-
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
-
 .productThumbnail__bordertop{
   background-color: #d80fe2;  
   border-top-left-radius: 8px;
@@ -19,7 +8,7 @@
 .productThumbnail{
   background-color: #EEEBD0;
   border-radius: 8px;
-  margin-top: 10px;  
+  margin-top: 30px;  
   margin-bottom: 20px;  
   width: 300px;
 }

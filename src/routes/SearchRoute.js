@@ -1,23 +1,17 @@
 import React from 'react';
 import {Search} from '../containers';
-import {Load} from '../components';
+import {useSelector} from 'react-redux';
+import {Redirect} from 'react-router-dom';
 
 export default function SearchRoute() {
-  const [products, setProducts] = React.useState([]);
-
-  React.useEffect( () => {
-      fetch('https://5e9935925eabe7001681c856.mockapi.io/api/v1/catalog')
-        .then(response => response.json())
-        .then(products => setProducts(products))
-        .catch(err => console.log(err))
-    }, []);
+  const products = useSelector(state => state.catalog.products);
 
   return (
-    <div className="search__route">
+    <main className="search__route">
       {products.length > 0 ?
         <Search products={products}/>
-        : <Load/>
+        : <Redirect to ="/"/>
       }
-    </div>
+    </main>
   )
 }

@@ -1,9 +1,11 @@
 import Catalog from './Catalog/Catalog';
 import Search from './Search/Search';
-import Product from './Product/Product';
+import Products from './Products/Products';
+import Cart from './Cart/Cart';
 
 export {
   Catalog,
   Search,
-  Product
+  Products,
+  Cart
 };

@@ -18,7 +18,7 @@ export default function Search({ products }) {
   }
 
   return (
-    <div className="search__container">
+    <section className="search__container darkable">
       <div className="search__input">
         <input
           placeholder="Search"
@@ -29,11 +29,11 @@ export default function Search({ products }) {
 
       <div className="search__results">
         {results.map(result =>
-          <div key={result.code_color}><ProductThumbnail product={result}/></div>
+          <div key={result.code_color}><ProductThumbnail product={result} /></div>
         )
         }
       </div>
 
-    </div>
+    </section>
   )
 }
