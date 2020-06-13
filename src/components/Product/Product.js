@@ -1,25 +1,17 @@
 import React from 'react';
 import not_found from '../../assets/image_not_found.png';
-import {useDispatch} from 'react-redux';
-import {newProduct} from '../../actions';
-import {Link} from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { newProduct } from '../../actions';
+import { Link } from 'react-router-dom';
+import './Product.css';
 
-export default function Product({ product}) {
+export default function Product({ product }) {
   const dispatch = useDispatch();
 
-  const handleClick = () => dispatch(newProduct({productToCart: product}));
+  const handleClick = () => dispatch(newProduct({ productToCart: product }));
 
   return (
     <div className="product">
-      <div className="product__bordertop">
-        k
-      </div>
-
-      {product.on_sale ?
-        <div className="product__discount">-{product.discount_percentage}</div>
-        : null
-      }
-
       <div className="product__img">
         {product.image ?
           <img src={`${product.image}`} alt={`${product.name}`} />
@@ -28,32 +20,53 @@ export default function Product({ product}) {
       </div>
 
       <div className="product__info">
-        <div className="product__name">{product.name}</div>
+        <div className="product__name"><h2>{product.name}</h2></div>
 
-        {product.on_sale ?
-          <div className="product__onsale">
-            <span className="product__regprice">{product.regular_price}</span>&nbsp;&nbsp;
-            <span className="product__actualprice">{product.actual_price}</span>
-          </div>
-          : <div className="product__actualprice">{product.actual_price}</div>
-        }
+        <div className="product__prices">
+          {product.on_sale ?
+            <div className="product__onsale">
+              <ul className="onsale__list">
+                <li className="product__actualprice"><h3>{product.actual_price}</h3></li>
+                <li className="product__regprice">{product.regular_price}</li>
+                <li className="product__discount">
+                  <i class="fas fa-fire" />
+                  -{product.discount_percentage}
+                </li>
+              </ul>
+            </div>
+            : <div className="product__actualprice"><h3>{product.actual_price}</h3></div>
+          }
 
-        <div className="product__sizes">
-          <h3>Sizes Available</h3>
-          {product.sizes.map((size, index) => size.available ?
-            <span key={index}>{size.size}&nbsp;&nbsp;</span>
-            : null)
+          {product.installments ?
+            <div className="product__installments">{product.installments}</div>
+            : null
           }
         </div>
 
+        <div className="product__color"><h4>{product.color} - {product.code_color}</h4></div>
+
+        <div className="product__sizes">
+          <h3>Sizes Available</h3>
+          <ul className="sizes__list">
+            {product.sizes.map((size, index) => size.available ?
+              <li className="sizes__item" key={index}>{size.size}</li>
+              : null)
+            }
+          </ul>
+        </div>
+
+
         <div className="product__button">
-          <button onClick={handleClick}>
-            <Link to="/cart">
+          <Link to="/cart">
+            <button onClick={handleClick}>
+
               Add to <i className="fas fa-shopping-cart" />
-            </Link>
-          </button>
-        </div>        
-        <br /><br /><br /><br /><br />
+
+            </button>
+          </Link>
+        </div>
+
       </div>
-    </div>)
+    </div>
+  )
 }

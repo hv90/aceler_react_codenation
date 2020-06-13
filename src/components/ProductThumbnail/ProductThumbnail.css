@@ -5,12 +5,17 @@
   color: transparent;
 }
 
-.productThumbnail{
+.productThumbnail {
   background-color: #EEEBD0;
   border-radius: 8px;
-  margin-top: 30px;  
-  margin-bottom: 20px;  
+  margin: 30px 15px 20px 20px;
   width: 300px;
+  border-top: 16px solid #D80FE2;
+}
+
+li:hover {
+  width: 310px;
+  background-color: black;
 }
 
 .productThumbnail__discount{

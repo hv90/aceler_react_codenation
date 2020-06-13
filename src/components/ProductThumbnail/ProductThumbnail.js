@@ -5,16 +5,12 @@ import not_found from '../../assets/image_not_found.png';
 
 export default function ProductThumbnail({ product }) {
   return (
-    <article className="productThumbnail">
+    <li className="productThumbnail">
       <Link to={{
                   pathname: `/product/${product.style}`,
                   style: `${product.style}`
                 }}
       >
-        <div className="productThumbnail__bordertop">
-          k
-        </div>
-
         {product.on_sale ?
           <div className="productThumbnail__discount">-{product.discount_percentage}</div>
           : null
@@ -40,6 +36,6 @@ export default function ProductThumbnail({ product }) {
         </div>
       </Link>
 
-    </article>
+    </li>
   )
 }

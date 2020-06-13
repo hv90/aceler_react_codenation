@@ -5,7 +5,7 @@ button{
     outline: none;
 }
 
-.topbar__items{
+.topbar__items {
     position: absolute;
     display: flex;
     justify-content: space-between;
@@ -20,14 +20,9 @@ button{
     } 
 }
 
-.topbar__logo{
-    display: inline-block;
-    height: 100px;
-    margin-right: 10px;
-}
-
-.topbar__logo img{
-    height: 100%;
+.topbar__logo img {
+    height: 15vh;
+    width: auto;
 }
 
 .clicked{

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Product } from '../../components';
 import { Redirect } from 'react-router-dom';
+import './Products.css';
 
 export default function Products({ style, products }) {
   const prodsToShow = products.filter(prod => prod.style === style);
