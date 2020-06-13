@@ -9,8 +9,9 @@ button{
     position: absolute;
     display: flex;
     justify-content: space-between;
+    height: 100px;
     width: 100%;
-    margin: 0 auto;
+    background-color: white;
 }
 
 @media screen and (max-width: 768px){
@@ -20,9 +21,12 @@ button{
     } 
 }
 
+.topbar__logo {
+    height: 100px;
+}
+
 .topbar__logo img {
-    height: 15vh;
-    width: auto;
+    height: 100%;
 }
 
 .clicked{
