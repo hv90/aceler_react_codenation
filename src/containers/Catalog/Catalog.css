@@ -16,36 +16,42 @@
   list-style: none;
 }
 
-.products__topButton {
-  width: 100%;
-}
 
-.topButton__link {
-  background-color: #D80FE2;
-  width: 100%;
-}
 
-.topButton__link h2 {
-  color: white;
-  font-size: xxx-large;
-  margin: 0 0 0 8%;
-}
 
-@media screen and (orientation: landscape){
+
+@media screen and (max-width: 768px){ 
   .products__topButton {
-    position: absolute;
+    width: 100%;
   }
-
+  
   .topButton__link {
     background-color: #D80FE2;
-    width: 30%;
-    margin: 0 0 0 70%;
-}
-
+    width: 100%;
+  }
+  
   .topButton__link h2 {
     color: white;
     font-size: xxx-large;
-    text-align: center;
-    margin: 0;
+    margin: 0 0 0 8%;
+  }
+
+  @media screen and (orientation: landscape){
+    .products__topButton {
+      position: absolute;
+    }
+
+    .topButton__link {
+      background-color: #D80FE2;
+      width: 30%;
+      margin: 0 0 0 70%;
+    }
+
+    .topButton__link h2 {
+      color: white;
+      font-size: xxx-large;
+      text-align: center;
+      margin: 0;
+    }
   }
 }
