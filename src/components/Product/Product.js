@@ -59,9 +59,7 @@ export default function Product({ product }) {
         <div className="product__button">
           <Link to="/cart">
             <button onClick={handleClick}>
-
-              Add to <i className="fas fa-shopping-cart" />
-
+              <h3>Add to <i className="fas fa-shopping-cart" /></h3>
             </button>
           </Link>
         </div>

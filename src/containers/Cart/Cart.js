@@ -5,11 +5,14 @@ export default function Cart({cart}) {
   
   return (
     <section className="cart__container darkable">
-      {cart.products.map(prod => 
+      <ul className="cart__productsList">
+        {cart.products.map(prod => 
         <ProductsCart key={`${prod.product.image}`} 
                  product={prod.product}
                  sizes={prod.sizes}
         />)}
+      </ul>
+      
     </section>
   )
 }

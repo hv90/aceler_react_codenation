@@ -18,6 +18,11 @@ export default function Catalog() {
           )
           : <Load />}
       </ul>
+      <div className="products__topButton">
+        <a href="/#top" style={{ position: "fixed" }} className="topButton__link">
+          <h2><i class="fa fa-angle-up"/></h2>
+        </a>
+      </div>
     </section >
   )
 }

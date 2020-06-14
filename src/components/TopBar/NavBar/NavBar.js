@@ -22,8 +22,9 @@ export default function NavBar({hideLogin, hideContact, hideCart}) {
         <li className={`navbar__item ${contact}`}><Link to="/contact"><h4>contact</h4></Link></li>
         <li className={`navbar__item ${cart}`}>
           <Link to="/cart">
-            <div className="cart__length">{length}</div>
-            <h4 ><i className="fas fa-shopping-cart" /></h4>
+            <div className="cart__length">
+            <h4 ><i className="fas fa-shopping-cart" /> ({length})</h4>
+            </div>
           </Link>
         </li>
       </ul>

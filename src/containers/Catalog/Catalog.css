@@ -1,4 +1,5 @@
 .products__container {
+  display: flex;
   position: absolute;
   margin-top: 100px;
 }
@@ -6,11 +7,45 @@
 .products__amount h4 {
   color: #EC0868;
   position: absolute;
-  margin: 10px 0 0 60px;
+  margin: 10px 0 0 45px;
 }
 
 .products_list {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+}
+
+.products__topButton {
+  width: 100%;
+}
+
+.topButton__link {
+  background-color: #D80FE2;
+  width: 100%;
+}
+
+.topButton__link h2 {
+  color: white;
+  font-size: xxx-large;
+  margin: 0 0 0 8%;
+}
+
+@media screen and (orientation: landscape){
+  .products__topButton {
+    position: absolute;
+  }
+
+  .topButton__link {
+    background-color: #D80FE2;
+    width: 30%;
+    margin: 0 0 0 70%;
+}
+
+  .topButton__link h2 {
+    color: white;
+    font-size: xxx-large;
+    text-align: center;
+    margin: 0;
+  }
 }

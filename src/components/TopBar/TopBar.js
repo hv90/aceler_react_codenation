@@ -8,7 +8,7 @@ import NavBar from './NavBar/NavBar';
 
 export default function topbar({hideSearch=false, hideLogin=false, hideContact=false, hideCart=false}) {
   return (
-    <header className="topbar">
+    <header className="topbar" id="top">
       <nav className="topbar__items">
         <SideBar hideSearch={hideSearch}/>
 

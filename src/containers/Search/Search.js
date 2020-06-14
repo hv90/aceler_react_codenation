@@ -1,16 +1,18 @@
 import React from 'react';
 import './Search.css';
-import {ProductThumbnail} from '../../components';
+import { ProductThumbnail } from '../../components';
 
 export default function Search({ products }) {
-  const [searchkey, setSearchkey] = React.useState(""); 
+  const [searchkey, setSearchkey] = React.useState("");
   const [results, setResults] = React.useState([]);
 
   const liveSearch = (keyword) => {
-      setSearchkey(keyword);
+    setSearchkey(keyword);
 
-      setResults(
-        products.filter(product => 
+    keyword === "" ?
+      setResults([])
+      : setResults(
+        products.filter(product =>
           product.name.toLowerCase()
             .includes(keyword.toLowerCase())
         )
@@ -21,17 +23,21 @@ export default function Search({ products }) {
     <section className="search__container darkable">
       <div className="search__input">
         <input
+          autoFocus
           placeholder="Search"
           value={"" || searchkey}
-          onChange={eventKeyDown => liveSearch(eventKeyDown.target.value) }
-        /> 
+          onChange={eventKeyDown => liveSearch(eventKeyDown.target.value)}
+        />
       </div>
 
       <div className="search__results">
-        {results.map(result =>
-          <div key={result.code_color}><ProductThumbnail product={result} /></div>
-        )
-        }
+        <ul className="products_list">
+          {results.map(result =>
+            <div key={result.code_color}><ProductThumbnail product={result} /></div>
+          )
+          }
+        </ul>
+
       </div>
 
     </section>

@@ -1,4 +1,6 @@
-.product__container{
+.product__container {
   position: absolute;
   margin-top: 100px;
+  width: 100%;
+  background-color: white;
 }
