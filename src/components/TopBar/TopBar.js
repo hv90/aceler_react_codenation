@@ -6,11 +6,11 @@ import {SideBar} from '../SideBar';
 import SearchBar from './SearchBar/SearchBar';
 import NavBar from './NavBar/NavBar';
 
-export default function topbar({hideSearch=false, hideLogin=false, hideContact=false, hideCart=false}) {
+export default function topbar({hideSearch=false, hideCart=false}) {
   return (
     <header className="topbar" id="top">
       <nav className="topbar__items">
-        <SideBar hideSearch={hideSearch}/>
+        <SideBar hideSearch={hideSearch} hideCart={hideCart}/>
 
         <div className="topbar__logo" >
           <Link to ="/">
@@ -25,8 +25,6 @@ export default function topbar({hideSearch=false, hideLogin=false, hideContact=f
         
         <div className="topbar__navbar">
           <NavBar 
-            hideLogin={hideLogin}
-            hideContact={hideContact}
             hideCart={hideCart}
           />
         </div>

@@ -19,9 +19,15 @@ button{
     .topbar__searchbar{
         display: none;
     } 
+
+    .topbar__logo {
+        margin: 0;
+        height: 100px;
+    }
 }
 
 .topbar__logo {
+    margin: 0 0 0 30px;
     height: 100px;
 }
 

@@ -9,14 +9,17 @@ a{
   padding: 20px;
 }
 
-.navbar__item{
-  margin: 0 9px;
+.navbar__item {
+  margin: 0 40px 0 0;
 }
 
-.navbar__item  h4{  
+.navbar__item  h3{  
   color: #ec0868;
 }
 
+.clicked{
+  opacity: 0.3;
+}
 
 @media screen and (max-width: 768px){
   .navbar__list{

@@ -2,13 +2,7 @@ import React from 'react';
 import './SideBar.css';
 import { NavBar, SearchBar } from '../TopBar';
 
-export default function SideBar(
-  {
-    hideSearch = false,
-    hideLogin = false,
-    hideContact = false,
-    hideCart = false
-  }) {
+export default function SideBar({ hideSearch = false, hideCart = false}) {
   const [isToggled, setToggled] = React.useState(false);
   const [display, setDisplay] = React.useState("none");
 
@@ -24,8 +18,6 @@ export default function SideBar(
 
     <div key="sidebar__navbar" onClick={handleClick}>
       <NavBar
-        hideLogin={hideLogin}
-        hideContact={hideContact}
         hideCart={hideCart}
       />
     </div >
